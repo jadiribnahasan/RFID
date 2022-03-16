@@ -2,6 +2,8 @@
 
 Radio Frequency Identafication
 
+[^1] [^2]
+
 Radio Frequency Identification (RFID) is the wireless non-contact use of radio frequency waves to transfer data. RFID systems usually comprise an RFID reader, RFID tags, and antennas.
 
 RFID belongs to a group of technologies referred to as Automatic Identification and Data Capture (AIDC). AIDC methods automatically identify objects, collect data about them, and enter those data directly into computer systems with little or no human intervention. RFID methods utilize radio waves to accomplish this. At a simple level, RFID systems consist of three components: an RFID tag or smart label, an RFID reader, and an antenna. RFID tags contain an integrated circuit and an antenna, which are used to transmit data to the RFID reader (also called an interrogator). The reader then converts the radio waves to a more usable form of data. Information collected from the tags is then transferred through a communications interface to a host computer system, where the data can be stored in a database and analyzed at a later time.
@@ -37,22 +39,61 @@ RFID belongs to a group of technologies referred to as Automatic Identification 
 
   ![alt text](iota-rfid.jpg)
 
-  * Types of RFID Tags
-    * **Active RFID** : An active RFID tag has its own power source, often a battery.
-    *  **Passive RFID** : A passive RFID tag receives its power from the reading antenna, whose electromagnetic wave induces a current in the RFID tag's antenna.
+* Types of RFID Tags
+* **Active RFID** : An active RFID tag has its own power source, often a battery.
+*  **Passive RFID** : A passive RFID tag receives its power from the reading antenna, whose electromagnetic wave induces a current in the RFID tag's antenna.
   
-  Low-power, embedded non-volatile memory plays an important role in every RFID system. RFID tags typically hold less than 2,000 KB of data, including a unique identifier/serial number. Tags can be read-only or read-write, where data can be added by the reader or existing data overwritten.
+Low-power, embedded non-volatile memory plays an important role in every RFID system. RFID tags typically hold less than 2,000 KB of data, including a unique identifier/serial number. Tags can be read-only or read-write, where data can be added by the reader or existing data overwritten.
 
-  * RFID vs BARCODE:
-    * ![alt text](rfidvsbarcode.png)
+* RFID vs BARCODE:
+* ![alt text](rfidvsbarcode.png)
 
-  * Selecting an RFID Tag :
-    * What type of surface will you be tagging? On metal, plastic, wood, etc.?
-    * What read range do you desire?
-    * Size limitations (i.e. the tag can be no larger than x by y by z inches)?
-    * Any excessive environmental conditions to consider? Excessive heat, cold, moisture, impact, etc.?
-    * 
+* Selecting an RFID Tag :
+  * What type of surface will you be tagging? On metal, plastic, wood, etc.?
+  * What read range do you desire?
+  * Size limitations (i.e. the tag can be no larger than x by y by z inches)?
+  * Any excessive environmental conditions to consider? Excessive heat, cold, moisture, impact, etc.?
+
+* Selecting an RFID Reader
+  * How much read range do you require for your application?
+  * How many read points/read zones will you need?
+  * Where will the reader be placed? Fixed location, or on a vehicle?
+  * Does the reader need to be mobile?
+  * How many tags might need to be read at one time?
+  * How quickly will the tags be moving through the read zone? For example, is this a slow-moving conveyor belt or fast-moving race?
+
+* RFID applications and use cases
+  * RFID dates back to the 1940s; however, it was used more frequently in the 1970s. For a long time, the high cost of the tags and readers prohibited widespread commercial use. As hardware costs have decreased, RFID adoption has also increased.
+
+  Some common uses for RFID applications include:
+    * inventory control
+    * asset tracking and equipment tracking
+    * vehicle tracking
+    * healthcare
+    * tap-and-go credit card payments
+    * pet and livestock tracking and many more
+
+* RFID Challenges
+
+  RFID is prone to two main issue
+    * Reader Collision : Reader collision, when a signal from one RFID reader interferes with a second reader, can be prevented by using an anti-collision protocol to make RFID tags take turns transmitting to their appropriate reader.
+
+    * Tag Collision : Tag collision occurs when too many tags confuse an RFID reader by transmitting data at the same time. Choosing a reader that gathers tag info one at a time will prevent this issue.
+
+* RFID security and privacy
+  
+  A common RFID security or privacy concern is that RFID tag data can be read by anyone with a compatible reader. Tags can often be read after an item leaves a store or supply chain. They can also be read without a user's knowledge using unauthorized readers, and if a tag has a unique serial number, it can be associated to a consumer. While a privacy concern for individuals, in military or medical settings this can be a national security concern or life-or-death matter.
+
+  Because RFID tags do not have a lot of compute power, they are unable to accommodate encryption, such as might be used in a challenge-response authentication system. One exception to this, however, is specific to RFID tags used in passports -- basic access control (BAC). Here, the chip has sufficient compute power to decode an encrypted token from the reader, thus proving the validity of the reader.
+
+* Next-generation RFID use
+
+  RFID systems are becoming increasingly used to support internet of things deployments. Combining the technology with smart sensors and/or GPS technology enables sensor data including temperature, movement and location to be wirelessly transmitted.
+
+
+
 
   
 
-
+[^1]: https://www.atlasrfidstore.com/rfid-beginners-guide/
+[^2]: https://internetofthingsagenda.techtarget.com/definition/RFID-radio-frequency-identification
